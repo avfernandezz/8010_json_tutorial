@@ -27,6 +27,8 @@
 		D1FE9B0A1AB90C6500ED0EC6 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = D1FE9AFC1AB90C6500ED0EC6 /* SBJsonTokeniser.m */; };
 		D1FE9B0B1AB90C6500ED0EC6 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = D1FE9AFE1AB90C6500ED0EC6 /* SBJsonUTF8Stream.m */; };
 		D1FE9B0C1AB90C6500ED0EC6 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D1FE9B001AB90C6500ED0EC6 /* SBJsonWriter.m */; };
+		D1FE9B111AB9124200ED0EC6 /* cellStudents.m in Sources */ = {isa = PBXBuildFile; fileRef = D1FE9B0F1AB9124200ED0EC6 /* cellStudents.m */; };
+		D1FE9B121AB9124200ED0EC6 /* cellStudents.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1FE9B101AB9124200ED0EC6 /* cellStudents.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,9 @@
 		D1FE9AFE1AB90C6500ED0EC6 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		D1FE9AFF1AB90C6500ED0EC6 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		D1FE9B001AB90C6500ED0EC6 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		D1FE9B0E1AB9124200ED0EC6 /* cellStudents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cellStudents.h; sourceTree = "<group>"; };
+		D1FE9B0F1AB9124200ED0EC6 /* cellStudents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cellStudents.m; sourceTree = "<group>"; };
+		D1FE9B101AB9124200ED0EC6 /* cellStudents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellStudents.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +125,7 @@
 		D1FE9ABB1AB90B7F00ED0EC6 /* json Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D1FE9B0D1AB9120700ED0EC6 /* Cells */,
 				D1FE9AE71AB90C6500ED0EC6 /* json */,
 				D1FE9AE61AB90BF700ED0EC6 /* Main */,
 				D1FE9AE51AB90BE700ED0EC6 /* Controllers */,
@@ -208,6 +214,16 @@
 			path = json;
 			sourceTree = "<group>";
 		};
+		D1FE9B0D1AB9120700ED0EC6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D1FE9B0E1AB9124200ED0EC6 /* cellStudents.h */,
+				D1FE9B0F1AB9124200ED0EC6 /* cellStudents.m */,
+				D1FE9B101AB9124200ED0EC6 /* cellStudents.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +307,7 @@
 				D1FE9ACB1AB90B7F00ED0EC6 /* Main.storyboard in Resources */,
 				D1FE9AD01AB90B7F00ED0EC6 /* LaunchScreen.xib in Resources */,
 				D1FE9ACD1AB90B7F00ED0EC6 /* Images.xcassets in Resources */,
+				D1FE9B121AB9124200ED0EC6 /* cellStudents.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1FE9B111AB9124200ED0EC6 /* cellStudents.m in Sources */,
 				D1FE9AC21AB90B7F00ED0EC6 /* AppDelegate.m in Sources */,
 				D1FE9AC51AB90B7F00ED0EC6 /* json_Tutorial.xcdatamodeld in Sources */,
 				D1FE9B081AB90C6500ED0EC6 /* SBJsonStreamWriterAccumulator.m in Sources */,

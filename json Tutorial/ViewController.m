@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SBJson.h"
+#import "cellStudents.h"
 
 NSString        *dataPost;
 NSDictionary    *jsonResponse;
@@ -28,6 +29,47 @@ NSMutableArray  *aStudentName;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+/***********************************************************************************************
+ Table Functions
+ **********************************************************************************************/
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+//-------------------------------------------------------------------------------
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    return aStudentName.count;
+}
+//-------------------------------------------------------------------------------
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 64;
+}
+
+//-------------------------------------------------------------------------------
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"cellStudents");
+    static NSString *CellIdentifier = @"cellStudents";
+    
+    cellStudents *cell = (cellStudents *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        [tableView registerNib:[UINib nibWithNibName:@"cellStudents" bundle:nil] forCellReuseIdentifier:@"cellStudents"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"cellStudents"];
+    }
+    
+    cell.selectionStyle     = UITableViewCellSelectionStyleNone;
+    cell.lblName.text       = [NSString stringWithFormat:@"%@",aStudentName[indexPath.row]];
+    
+    return cell;
+}
+//-------------------------------------------------------------------------------
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 }
 
 /*******************************************************************************
@@ -90,7 +132,13 @@ NSMutableArray  *aStudentName;
     NSLog(@"jsonResponse %@", jsonResponse);
     aStudentName        = [jsonResponse valueForKey:@"studentName"];
     NSLog(@"aStudentName %@", aStudentName);
+    [self.tblStudents reloadData];
     //[self.tblMain reloadData];
 }
 
+- (IBAction)btnRefreshPress:(id)sender
+{
+    [self postService];
+    [self.tblStudents reloadData];
+}
 @end
